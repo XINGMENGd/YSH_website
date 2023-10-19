@@ -14,7 +14,7 @@ export default function useMockRequest<T>(request: RequestTuple, params: Request
     const { method, url } = request;
     const { data = {}, config = {} } = params;
     const controller = useAxiosMethods(mockAxios);
-
+    
     if (!controller[method]) throw new Error('当前请求方法仅支持get/post/put/delete');
 
     // 发送请求的函数
