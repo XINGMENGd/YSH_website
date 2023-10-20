@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/YSH_website/static/css/main.542c04c0.css",
+    "main.js": "/YSH_website/static/js/main.adbe10f4.js",
+    "static/css/866.b9d53835.chunk.css": "/YSH_website/static/css/866.b9d53835.chunk.css",
+    "static/js/866.46ceccbc.chunk.js": "/YSH_website/static/js/866.46ceccbc.chunk.js",
+    "static/css/319.e997bd76.chunk.css": "/YSH_website/static/css/319.e997bd76.chunk.css",
+    "static/js/319.12eacd55.chunk.js": "/YSH_website/static/js/319.12eacd55.chunk.js",
+    "static/css/980.1950748c.chunk.css": "/YSH_website/static/css/980.1950748c.chunk.css",
+    "static/js/980.991054c9.chunk.js": "/YSH_website/static/js/980.991054c9.chunk.js",
+    "static/css/501.eab8cf68.chunk.css": "/YSH_website/static/css/501.eab8cf68.chunk.css",
+    "static/js/501.647df8dc.chunk.js": "/YSH_website/static/js/501.647df8dc.chunk.js",
+    "static/css/694.6649946f.chunk.css": "/YSH_website/static/css/694.6649946f.chunk.css",
+    "static/js/694.7198dfb4.chunk.js": "/YSH_website/static/js/694.7198dfb4.chunk.js",
+    "static/js/27.58844161.chunk.js": "/YSH_website/static/js/27.58844161.chunk.js",
+    "static/js/772.0aff45bf.chunk.js": "/YSH_website/static/js/772.0aff45bf.chunk.js",
+    "static/media/logo.png": "/YSH_website/static/media/logo.6679f20bad0a3b0859bf.png",
+    "static/media/Poppins-Bold.eot": "/YSH_website/static/media/Poppins-Bold.aa7e7c78684f2438b4ae.eot",
+    "static/media/Poppins-Bold.svg": "/YSH_website/static/media/Poppins-Bold.35249c5d5aab460617df.svg",
+    "static/media/Poppins-Bold.woff": "/YSH_website/static/media/Poppins-Bold.dcd9bfe1c6114bb6757f.woff",
+    "static/media/Poppins-Bold.ttf": "/YSH_website/static/media/Poppins-Bold.1d8c307799becfd1150a.ttf",
+    "static/media/Poppins-Bold.woff2": "/YSH_website/static/media/Poppins-Bold.5042994031e52c9b7ae3.woff2",
+    "index.html": "/YSH_website/index.html",
+    "static/media/home-active.svg": "/YSH_website/static/media/home-active.0a143812d23e7b5167b1dd3ee15bedeb.svg",
+    "static/media/home.svg": "/YSH_website/static/media/home.3a06abd8387c3b88848250ba481c63f1.svg",
+    "static/media/rightArrow.svg": "/YSH_website/static/media/rightArrow.4c0b828e0292f170434d52cf20eb94f9.svg",
+    "static/media/my-active.svg": "/YSH_website/static/media/my-active.bc62c4d006390cdb2a0e05a84c5ef1d7.svg",
+    "static/media/my.svg": "/YSH_website/static/media/my.24f170094b2e0a5c57ece6889b8c7fae.svg"
+  },
+  "entrypoints": [
+    "static/css/main.542c04c0.css",
+    "static/js/main.adbe10f4.js"
+  ]
+}
