@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/YSH_website/static/css/main.542c04c0.css",
-    "main.js": "/YSH_website/static/js/main.adbe10f4.js",
+    "main.js": "/YSH_website/static/js/main.3fbc4d50.js",
     "static/css/866.b9d53835.chunk.css": "/YSH_website/static/css/866.b9d53835.chunk.css",
-    "static/js/866.46ceccbc.chunk.js": "/YSH_website/static/js/866.46ceccbc.chunk.js",
+    "static/js/866.93ed5ae3.chunk.js": "/YSH_website/static/js/866.93ed5ae3.chunk.js",
     "static/css/319.e997bd76.chunk.css": "/YSH_website/static/css/319.e997bd76.chunk.css",
     "static/js/319.12eacd55.chunk.js": "/YSH_website/static/js/319.12eacd55.chunk.js",
     "static/css/980.1950748c.chunk.css": "/YSH_website/static/css/980.1950748c.chunk.css",
     "static/js/980.991054c9.chunk.js": "/YSH_website/static/js/980.991054c9.chunk.js",
     "static/css/501.eab8cf68.chunk.css": "/YSH_website/static/css/501.eab8cf68.chunk.css",
-    "static/js/501.647df8dc.chunk.js": "/YSH_website/static/js/501.647df8dc.chunk.js",
+    "static/js/501.6cb65b88.chunk.js": "/YSH_website/static/js/501.6cb65b88.chunk.js",
     "static/css/694.6649946f.chunk.css": "/YSH_website/static/css/694.6649946f.chunk.css",
-    "static/js/694.7198dfb4.chunk.js": "/YSH_website/static/js/694.7198dfb4.chunk.js",
+    "static/js/694.23b0b231.chunk.js": "/YSH_website/static/js/694.23b0b231.chunk.js",
     "static/js/27.58844161.chunk.js": "/YSH_website/static/js/27.58844161.chunk.js",
     "static/js/772.0aff45bf.chunk.js": "/YSH_website/static/js/772.0aff45bf.chunk.js",
     "static/media/logo.png": "/YSH_website/static/media/logo.6679f20bad0a3b0859bf.png",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.542c04c0.css",
-    "static/js/main.adbe10f4.js"
+    "static/js/main.3fbc4d50.js"
   ]
 }
