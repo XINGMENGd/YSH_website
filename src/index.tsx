@@ -1,9 +1,8 @@
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import render from './helpers/render';
+import render from './utils/render';
 import './global/style/reset.css';
-
 
 render(<App />);
 
@@ -11,7 +10,6 @@ render(<App />);
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
 
 if (process.env.NODE_ENV === 'development') {
     // const VConsole = require('vconsole');

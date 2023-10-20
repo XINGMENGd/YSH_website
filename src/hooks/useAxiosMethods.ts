@@ -1,4 +1,4 @@
-import createHttpMethod from "@/helpers/createHttpMethod";
+import createHttpMethod from "src/utils/createHttpMethod";
 import { useMemo } from "react";
 
 

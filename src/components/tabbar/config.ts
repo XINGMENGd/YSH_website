@@ -1,15 +1,22 @@
-import Home from '@/images/tabbar/home.svg';
-import HomeActive from '@/images/tabbar/home-active.svg';
-import My from '@/images/tabbar/my.svg';
-import MyActive from '@/images/tabbar/my-active.svg';
+import Home from '@/images/tabBar/home.svg';
+import HomeActive from '@/images/tabBar/home-active.svg';
+import My from '@/images/tabBar/my.svg';
+import MyActive from '@/images/tabBar/my-active.svg';
 
-export const tabbarConfig = [
+export const tabBarConfig = [
     {
         name: '首页',
         icon: Home,
         active: HomeActive,
         route: '/home',
         title: '首页'
+    },
+    {
+        name: 'useStore',
+        icon: My,
+        active: MyActive,
+        route: '/useStore',
+        title: 'useStore'
     },
     {
         name: '我的',

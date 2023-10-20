@@ -3,7 +3,7 @@ import ApiCollector from '@/const/apis';
 import useMockRequest from '@/hooks/useMockRequest';
 import Logo from '@/images/logo.png';
 import styles from './index.module.less';
-import Tabbar from '@/components/tabbar';
+import TabBar from '@/components/tabBar';
 import { routesUrl } from '@/const/routes';
 import get from 'lodash/get';
 import HomeLoader from '@/components/skeleton/homeLoader';
@@ -28,7 +28,7 @@ const Home: FC = () => {
 
     const { data, error, loading } = useMockRequest<Data>(ApiCollector.getHome, {});
 
-    const deep = (id) => {
+    const deep = (id: number) => {
 
         if (id === 9) return navigate(routesUrl.list);
         if (id === 10) return navigate(routesUrl.virtuaList);
@@ -37,7 +37,7 @@ const Home: FC = () => {
     if (loading) {
         return <div className={styles.loader}>
             <HomeLoader />
-            <Tabbar />
+            <TabBar />
         </div>;
     }
 
@@ -62,7 +62,7 @@ const Home: FC = () => {
                     }
                 </div>
             </div>
-            <Tabbar />
+            <TabBar />
         </div>
     </Layout>;
 

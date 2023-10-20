@@ -46,7 +46,7 @@
     "@babel/generator" "^7.21.4"
     "@babel/helper-compilation-targets" "^7.21.4"
     "@babel/helper-module-transforms" "^7.21.2"
-    "@babel/helpers" "^7.21.0"
+    "@babel/utils" "^7.21.0"
     "@babel/parser" "^7.21.4"
     "@babel/template" "^7.20.7"
     "@babel/traverse" "^7.21.4"
@@ -271,9 +271,9 @@
     "@babel/traverse" "^7.20.5"
     "@babel/types" "^7.20.5"
 
-"@babel/helpers@^7.21.0":
+"@babel/utils@^7.21.0":
   version "7.21.0"
-  resolved "https://registry.npmmirror.com/@babel/helpers/-/helpers-7.21.0.tgz#9dd184fb5599862037917cdc9eecb84577dc4e7e"
+  resolved "https://registry.npmmirror.com/@babel/utils/-/utils-7.21.0.tgz#9dd184fb5599862037917cdc9eecb84577dc4e7e"
   integrity sha512-XXve0CBtOW0pd7MRzzmoyuSj0e3SEzj8pgyFxnTT1NJZL38BD1MK7yYrm8yefRPIDvNNe14xR4FdbHwpInD4rA==
   dependencies:
     "@babel/template" "^7.20.7"

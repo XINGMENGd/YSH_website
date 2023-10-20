@@ -2,34 +2,18 @@
   "compilerOptions": {
     "baseUrl": "./",
     "strict": false,
-    "paths": { // 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/const/*": [
-        "src/const/*"
-      ],
-      "@/global/*": [
-        "src/global/*"
-      ],
-      "@/helpers/*": [
-        "src/helpers/*"
-      ],
-      "@/hooks/*": [
-        "src/hooks/*"
-      ],
-      "@/images/*": [
-        "src/images/*"
-      ],
-      "@/pages/*": [
-        "src/pages/*"
-      ],
-      "@/store/*": [
-        "src/store/*"
-      ],
-      "@/type/*": [
-        "src/type/*"
-      ],
+    "paths": {
+      // 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
+      "@/components/*": ["src/components/*"],
+      "@/const/*": ["src/const/*"],
+      "@/global/*": ["src/global/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/images/*": ["src/images/*"],
+      "@/pages/*": ["src/pages/*"],
+      "@/store/*": ["src/store/*"],
+      "@/routes/*": ["src/routes/*"],
+      "@/type/*": ["src/type/*"]
     },
     "jsx": "react"
   }

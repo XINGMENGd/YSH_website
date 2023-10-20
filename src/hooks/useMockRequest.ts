@@ -1,4 +1,4 @@
-import { mockAxios } from "@/helpers/axios";
+import { mockAxios } from "src/utils/axios";
 import RequestProps, { RequestTuple } from "@/type/request";
 import { useRequest } from "ahooks";
 import get from 'lodash/get';

@@ -90,7 +90,7 @@ yarn start
 在本项目中，我们将`axios`同`ahook`的`useRequest`结合，实现了首屏加载时的骨架屏效果，相信看了demo的同学已经体验了一下
 
 ### useRequest与axios封装
-`useRequest` 的第一个参数是一个异步函数，在组件初次加载时，会自动触发该函数执行。同时自动管理该异步函数的 `loading` , `data` , `error` 等状态。所以本项目的请求都是基于`useRequest`来实现的，比如我们先在 `src/helpers/axios.ts` 目录下，新建一个请求的url根路径
+`useRequest` 的第一个参数是一个异步函数，在组件初次加载时，会自动触发该函数执行。同时自动管理该异步函数的 `loading` , `data` , `error` 等状态。所以本项目的请求都是基于`useRequest`来实现的，比如我们先在 `src/utils/axios.ts` 目录下，新建一个请求的url根路径
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/79c60465888a42188f231f6945403843~tplv-k3u1fbpfcp-watermark.image?)
 
@@ -421,8 +421,8 @@ export default CardLoader;
       "@/global/*": [
         "src/global/*"
       ],
-      "@/helpers/*": [
-        "src/helpers/*"
+      "@/utils/*": [
+        "src/utils/*"
       ],
       "@/components/*": [
         "src/components/*"
@@ -507,7 +507,7 @@ export default function useReachBottom(f: Function, ifStop?: boolean) {
 
 ### `useMockPagination` api分页hook
 ```js
-import { mockAxios } from "@/helpers/axios";
+import { mockAxios } from "@/utils/axios";
 import RequestProps, { RequestTuple } from "@/type/request";
 import get from 'lodash/get';
 import useAxiosMethods from "./useAxiosMethods";
