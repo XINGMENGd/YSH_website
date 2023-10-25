@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { routesUrl } from '@/const/routes';
 import TabBar from '@/components/tabBar';
 import Logo from '@/images/logo.png';
 import styles from './index.module.less';

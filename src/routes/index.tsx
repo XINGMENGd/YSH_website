@@ -35,7 +35,6 @@ const routes: RouteObject[] = [
     path: '/my',
     element: lazyLoad(lazy(() => import('@/pages/my/index')))
   },
-
   // 路由重定向
   {
     path: '/',
@@ -43,6 +42,17 @@ const routes: RouteObject[] = [
     errorElement: <RootBoundary />
   }
 ];
+
+// 路由路径表   用于路由跳转?
+export const routesUrl = {
+  home: '/home',
+  my: '/my',
+  useStore: '/useStore',
+
+  getProductList: '/getProductList',
+  list: '/list',
+  virtuaList: '/virtuaList'
+};
 
 export default function () {
   const router = createHashRouter(routes);

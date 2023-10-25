@@ -9,11 +9,12 @@
       "@/global/*": ["src/global/*"],
       "@/utils/*": ["src/utils/*"],
       "@/hooks/*": ["src/hooks/*"],
-      "@/images/*": ["src/images/*"],
+      "@/images/*": ["src/assets/images/*"],
       "@/pages/*": ["src/pages/*"],
       "@/store/*": ["src/store/*"],
       "@/routes/*": ["src/routes/*"],
-      "@/type/*": ["src/type/*"]
+      "@/type/*": ["src/type/*"],
+      "@/api/*": ["src/api/*"]
     },
     "jsx": "react"
   }

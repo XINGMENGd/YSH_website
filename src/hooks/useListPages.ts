@@ -1,10 +1,10 @@
-import useMockPagination from "./useMockPagination";
+import usePagination from "./usePagination";
 import useReachBottom from "./useReachBottom";
-import { RequestTuple } from "@/type/request";
 
 
-export default function useListPages(request: RequestTuple, params = {}) {
-    const { loading, list, initList, getList, ifDone } = useMockPagination(request, params);
+export default function useListPages(request: any, params = {}) {
+    const { loading, list, initList, getList, ifDone } = usePagination(request, params);
+    console.log(list, 'list');
 
     useReachBottom(getList);
 

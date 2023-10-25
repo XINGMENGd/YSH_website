@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styles from './index.module.less';
-import { http2https } from "src/utils/http2https";
+import { http2https } from "@/utils/http/http2https";
 import { toast } from "../toast";
 
 interface LiProps {

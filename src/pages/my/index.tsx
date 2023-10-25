@@ -1,25 +1,42 @@
-import { FC } from 'react';
-import { routesUrl } from '@/const/routes';
+import { FC, useState } from 'react';
 import TabBar from '@/components/tabBar';
-import Logo from '@/images/logo.png';
 import styles from './index.module.less';
-import magicStore from '@/store/magic';
+import authStore from '@/store/auth';
 import { observer } from 'mobx-react-lite';
 import Layout from '@/components/layout';
+import { login } from '@/api/auth/index';
 
 const My: FC = () => {
-
-    const onMagic = () => {
-        magicStore.triggerMagic('真乖，如果对您有帮助请在github上点个星星哦~ ');
-    };
-
-    return <Layout title='我的'>
-        <div className={styles.my}>
-            <div>我的</div>
-            <TabBar />
+  const [formData, setFormData] = useState({
+    loginId: '',
+    password: ''
+  })
+  function handleChange(e) {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
+  async function handleSubmit(e) {
+    e.preventDefault()
+    const { data: { token, userInfo } } = await login(formData)
+    authStore.setToken(token)
+    console.log(token);
+  }
+  return <Layout title='我的'>
+    <div className={styles.my}>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <input type="text" name='loginId' value={formData.loginId} onChange={handleChange} placeholder='请输入用户名或邮箱' />
         </div>
-    </Layout>;
-
+        <div>
+          <input type="text" name='password' value={formData.password} onChange={handleChange} placeholder='请输入密码' />
+        </div>
+        <div>
+          <button type='submit'>登录</button>
+        </div>
+      </form>
+      <div>{authStore.getToken} </div>
+      <TabBar />
+    </div>
+  </Layout>;
 
 };
 

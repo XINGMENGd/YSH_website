@@ -1,4 +1,4 @@
-import { routesUrl } from "@/const/routes";
+import { routesUrl } from "@/routes/index";
 import { useUpdate } from "ahooks";
 import { useEffect, useRef } from "react";
 import { useLocation, useNavigate, useOutlet } from "react-router-dom";

@@ -94,7 +94,7 @@ yarn start
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/79c60465888a42188f231f6945403843~tplv-k3u1fbpfcp-watermark.image?)
 
-笔者这里使用了[fastmock](https://www.fastmock.site/)在线mock来模拟真实的请求，如下图笔者建立了两个api
+笔者这里使用了[mock](https://www.fastmock.site/)在线mock来模拟真实的请求，如下图笔者建立了两个api
 
 ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3b4d3ea4503b4f3ab71a529c7f834566~tplv-k3u1fbpfcp-watermark.image?)
 

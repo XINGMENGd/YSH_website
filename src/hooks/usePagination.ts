@@ -1,7 +1,6 @@
-import { mockAxios } from "src/utils/axios";
-import RequestProps, { RequestTuple } from "@/type/request";
+import defHttp from "@/utils/http/axios";
+import RequestProps from "@/type/request";
 import get from 'lodash/get';
-import useAxiosMethods from "./useAxiosMethods";
 import { useRef, useState } from "react";
 import { toast } from "@/components/toast";
 import { useRequest } from "ahooks";
@@ -19,8 +18,7 @@ import { useRequest } from "ahooks";
  *}
  */
 
-export default function useMockPagination<T>(request: RequestTuple, params: RequestProps<T>) {
-    const { method, url } = request;
+export default function usePagination<T>(url: any, params: RequestProps<T>) {
     const { data = {}, config = {} } = params;
 
     const [list, setList] = useState<any[]>([]);
@@ -30,20 +28,16 @@ export default function useMockPagination<T>(request: RequestTuple, params: Requ
         ifDone: false
     });
 
-    const controller = useAxiosMethods(mockAxios);
-
-    if (!controller[method]) throw new Error('当前请求方法仅支持get/post/put/delete');
-
     // 请求接口的函数
     const http: () => any = async () => {
 
         if (pageConfig.current.ifDone) return;
 
-        const res = await controller[method](url, {
+        const res = await defHttp.get(url, {
             ...data,
             pageSize: pageConfig.current.pageSize,
             pageNum: pageConfig.current.pageNum,
-        });
+        })
 
         const returnCode = get(res, 'data.code', '');
         const returnDesc = get(res, 'data.desc', '');

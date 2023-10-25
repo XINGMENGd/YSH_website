@@ -27,3 +27,17 @@ code {
   font-size: 16px;
   white-space: nowrap;
 }
+
+input {
+  outline: none;
+  border: 0;
+  background: none;
+}
+
+button {
+  /* 清除默认边框 */
+  border: 0;
+  outline: none;
+  /*清除默认背景 */
+  background-color: transparent;
+}

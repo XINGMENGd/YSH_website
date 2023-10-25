@@ -1,6 +1,5 @@
 import { FC } from 'react';
-import ApiCollector from '@/const/apis';
-import useListPages from '@/hooks/useListPages';
+import useListPages from '@/hooks/usePagination';
 import FetchTips from '@/components/fetchTips';
 import Layout from '@/components/layout';
 import ListLoader from '@/components/skeleton/listLoader';
@@ -8,8 +7,9 @@ import styles from './index.module.less';
 import Card from '@/components/card';
 
 const List: FC = () => {
-    const { loading, list, ifDone } = useListPages(ApiCollector.getList, {});
-
+    const { loading, list, ifDone } = useListPages('/getProductList', {});
+    console.log(loading);
+    
     // 如果请求还在加载，则渲染骨架屏
     if (loading) return <ListLoader />;
 
