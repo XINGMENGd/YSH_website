@@ -16,9 +16,10 @@ const My: FC = () => {
   }
   async function handleSubmit(e) {
     e.preventDefault()
-    const { data: { token, userInfo } } = await login(formData)
-    authStore.setToken(token)
-    console.log(token);
+    const { data: userInfo } = await login(formData)
+    authStore.setUserInfo(userInfo)
+    console.log(authStore.getUserInfo);
+    
   }
   return <Layout title='我的'>
     <div className={styles.my}>
@@ -33,7 +34,7 @@ const My: FC = () => {
           <button type='submit'>登录</button>
         </div>
       </form>
-      <div>{authStore.getToken} </div>
+      <div>{authStore.getUserInfo?.token} </div>
       <TabBar />
     </div>
   </Layout>;

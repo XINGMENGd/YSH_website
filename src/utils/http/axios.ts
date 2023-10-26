@@ -1,24 +1,44 @@
-import createErrorLog from "./createErrorLog";
+import responseInterceptors from "./responseInterceptors";
+import errorInterceptors from "./errorInterceptors";
 import axios from 'axios';
+import authStore from "@/store/auth";
 
 // 全局的 axios 默认值
 axios.defaults.baseURL = 'http://localhost:5666/devApi';
-axios.defaults.timeout = 1000 * 10
+axios.defaults.timeout = 1000 * 20
 axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
-axios.defaults.headers.common['Authorization'] = 'AUTH_TOKEN';
 
-interface Http {
-  get<T>(url: string, params?: unknown): Promise<ResType<T>>
-  post<T>(url: string, params?: unknown): Promise<ResType<T>>
-  upload<T>(url: string, file: unknown, body: unknown): Promise<ResType<T>>
-  download(url: string): void
-}
+axios.interceptors.request.use(
+  (config) => {
+    const { id, token } = authStore.getUserInfo
 
-interface ResType<T> {
+    if (token !== '') {
+      config.headers['User-Identifier'] = id
+      config.headers['Authorization'] = token
+    }
+    return config
+  },
+  (error) => {
+    return error
+  }
+)
+// 添加响应拦截器
+axios.interceptors.response.use(
+  response => responseInterceptors(response),
+  error => errorInterceptors(error)
+);
+
+interface ResType {
   code: number
   data?: any
   message?: string
   err?: string
+}
+interface Http {
+  get(url: string, params?: unknown): Promise<ResType>
+  post(url: string, params?: unknown): Promise<ResType>
+  upload(url: string, file: unknown, body: unknown): Promise<ResType>
+  download(url: string): void
 }
 
 const defHttp: Http = {
@@ -35,7 +55,6 @@ const defHttp: Http = {
       const res = await axios.post(url, JSON.stringify(params))
       return res.data
     } catch (err: any) {
-      console.log(err, 'err');
       throw err.response?.data || err?.data || err
     }
   },
@@ -67,7 +86,6 @@ const defHttp: Http = {
   }
 }
 
-// 添加响应拦截器
-axios.interceptors.response.use(response => response, createErrorLog(['status', 'statusText']));
+
 
 export default defHttp;
