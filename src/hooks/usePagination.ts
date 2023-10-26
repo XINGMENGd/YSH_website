@@ -33,10 +33,13 @@ export default function usePagination<T>(url: any, params: RequestProps<T>) {
 
         if (pageConfig.current.ifDone) return;
 
-        const res = await defHttp.get(url, {
-            ...data,
-            pageSize: pageConfig.current.pageSize,
-            pageNum: pageConfig.current.pageNum,
+        const res = await defHttp.get({
+            url,
+            params: {
+                ...data,
+                pageSize: pageConfig.current.pageSize,
+                pageNum: pageConfig.current.pageNum,
+            }
         })
 
         const returnCode = get(res, 'data.code', '');
